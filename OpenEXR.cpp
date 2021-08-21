@@ -1861,7 +1861,7 @@ static PyObject *inchannels_multipart(PyObject *self, PyObject *args, PyObject *
     }
 
     ChannelList channels = header.channels();
-    ImfForward ::FrameBuffer frameBuffer;
+    FrameBuffer frameBuffer;
 
     int width  = dw.max.x - dw.min.x + 1;
     int height = maxy - miny + 1;
