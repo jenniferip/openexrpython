@@ -9,6 +9,7 @@ import platform
 
 from distutils.core import setup, Extension
 
+os.environ["CXX"]="c++14"
 version = "1.3.2"
 compiler_args = ['-g', '-DVERSION="%s"' % version]
 
