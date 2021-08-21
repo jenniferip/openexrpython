@@ -14,7 +14,6 @@ compiler_args = ['-g', '-DVERSION="%s"' % version]
 
 if sys.platform == 'darwin':
     compiler_args.append('-std=c++14')
-    compiler_args.append('-stdlib=libstdc++')
     if 'MACOSX_DEPLOYMENT_TARGET' not in os.environ:
         current_system = LooseVersion(platform.mac_ver()[0])
         python_target = LooseVersion(
