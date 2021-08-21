@@ -62,6 +62,7 @@ typedef int Py_ssize_t;
 #include <ImfTimeCodeAttribute.h>
 #include <ImfVecAttribute.h>
 #include <ImfVersion.h>
+#include <ImfFoward.h>
 
 #include <OpenEXRConfig.h>
 
