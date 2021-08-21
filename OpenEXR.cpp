@@ -62,7 +62,6 @@ typedef int Py_ssize_t;
 #include <ImfTimeCodeAttribute.h>
 #include <ImfVecAttribute.h>
 #include <ImfVersion.h>
-#include </Users/jenniferpenuelas/Downloads/openexr-3.0.4/src/lib/OpenEXR/ImfForward.h>
 
 #include <OpenEXRConfig.h>
 
@@ -345,7 +344,7 @@ static PyObject *channel_tiled(PyObject *self, PyObject *args, PyObject *kw)
 
     try
     {
-        ImfForward::FrameBuffer frameBuffer;
+        FrameBuffer frameBuffer;
         size_t xstride = typeSize;
         size_t ystride = typeSize * width;
         frameBuffer.insert(cname,
@@ -404,7 +403,7 @@ static PyObject *channels_tiled(PyObject *self, PyObject *args, PyObject *kw)
     }
 
     ChannelList channels = file->header().channels();
-    ImfForward::FrameBuffer frameBuffer;
+    FrameBuffer frameBuffer;
 
     int width = std::min((tile_maxx+1)*tileXSize, dw.max.x - dw.min.x + 1) - tile_minx * tileXSize;
     int height = std::min((tile_maxy+1)*tileYSize, dw.max.y - dw.min.y + 1) - tile_miny * tileYSize;
@@ -620,7 +619,7 @@ static PyObject *channel(PyObject *self, PyObject *args, PyObject *kw)
 
     try
     {
-        ImfForward::FrameBuffer frameBuffer;
+        FrameBuffer frameBuffer;
         size_t xstride = typeSize;
         size_t ystride = typeSize * width;
         frameBuffer.insert(cname,
@@ -676,7 +675,7 @@ static PyObject *channels(PyObject *self, PyObject *args, PyObject *kw)
     }
 
     ChannelList channels = file->header().channels();
-    ImfForward::FrameBuffer frameBuffer;
+    FrameBuffer frameBuffer;
 
     int width  = dw.max.x - dw.min.x + 1;
     int height = maxy - miny + 1;
@@ -1424,7 +1423,7 @@ static PyObject *outwrite(PyObject *self, PyObject *args)
         currentScanLine = dw.max.y - currentScanLine + dw.min.y;
     }
 
-    ImfForward::FrameBuffer frameBuffer;
+    FrameBuffer frameBuffer;
     std::vector<Py_buffer> views;
 
     const ChannelList &channels = file->header().channels();
@@ -1793,7 +1792,7 @@ static PyObject *inchannel_multipart(PyObject *self, PyObject *args, PyObject *k
 
     try
     {
-        ImfForward::FrameBuffer frameBuffer;
+        FrameBuffer frameBuffer;
         size_t xstride = typeSize;
         size_t ystride = typeSize * width;
         frameBuffer.insert(cname,
@@ -2141,7 +2140,7 @@ static PyObject *multioutwrite(PyObject *self, PyObject *args)
     if(height == -1)
         height = dw.max.y - dw.min.y + 1;
 
-    ImfForward::FrameBuffer frameBuffer;
+    FrameBuffer frameBuffer;
     std::vector<Py_buffer> views;
     OutputPart* part = new OutputPart(*file, partNum);
 
