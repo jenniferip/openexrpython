@@ -62,6 +62,7 @@ typedef int Py_ssize_t;
 #include <ImfTimeCodeAttribute.h>
 #include <ImfVecAttribute.h>
 #include <ImfVersion.h>
+#include <ImfFrameBuffer.h>
 
 #include <OpenEXRConfig.h>
 
@@ -89,6 +90,7 @@ typedef int Py_ssize_t;
 #include <iomanip>
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 using namespace Imf;
