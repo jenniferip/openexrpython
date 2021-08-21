@@ -32,7 +32,7 @@ setup(name='OpenEXR',
   ext_modules=[ 
     Extension('OpenEXR',
               ['OpenEXR.cpp'],
-              include_dirs=['/usr/include/OpenEXR', '/usr/local/include/OpenEXR', '/opt/local/include/OpenEXR'],
+              include_dirs=['/usr/include/OpenEXR', '/usr/local/include/OpenEXR', '/opt/local/include/OpenEXR', '/usr/local/include/Imath'],
               library_dirs=['/usr/local/lib', '/opt/local/lib'],
               libraries=['Iex', 'Imath', 'OpenEXR', 'z'],
               extra_compile_args=compiler_args)
