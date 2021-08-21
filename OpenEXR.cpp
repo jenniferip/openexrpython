@@ -62,7 +62,7 @@ typedef int Py_ssize_t;
 #include <ImfTimeCodeAttribute.h>
 #include <ImfVecAttribute.h>
 #include <ImfVersion.h>
-#include <ImfFoward.h>
+#include </Users/jenniferpenuelas/Downloads/openexr-3.0.4/src/lib/OpenEXR/ImfForward.h>
 
 #include <OpenEXRConfig.h>
 
